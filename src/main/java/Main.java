@@ -1,7 +1,5 @@
 import exceptions.ExceptionsDemo;
 
-import java.io.IOException;
-
 public class Main
 {
 	public static void main(final String[] args)
@@ -12,7 +10,7 @@ public class Main
 		}
 		catch(Throwable e)
 		{
-			System.err.println("An unexpected error occurred");
+			System.err.println(e.getMessage());
 		}
 	}
 }
