@@ -10,12 +10,14 @@ public class ExceptionsDemo
 {
 	public static void show()
 	{
-		FileReader reader = null;
-		try
+		File file = new File("file.txt");
+
+		// try-with-resources is a feature of Java 7 that automatically closes resources
+		try (FileReader reader = new FileReader(file))
 		{
-			var file = new File("file.txt");
+
 			new SimpleDateFormat().parse("abc");
-			reader = new FileReader(file);
+
 		}
 		// we can have multiple catch exceptions in one catch block
 		catch(IOException | ParseException e) // it is called c catch block or catch clause`
@@ -24,21 +26,6 @@ public class ExceptionsDemo
 
 			// we can also get the message of the exception
 			System.out.println(e.getMessage());
-		}
-		finally // it always gets executed
-		{
-			if(reader != null)
-			{
-				try
-				{
-					reader.close();
-				}
-				catch(IOException e)
-				{
-					e.printStackTrace();
-				}
-			}
-
 		}
 	}
 }
