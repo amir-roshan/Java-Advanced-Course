@@ -1,5 +1,16 @@
 package exceptions;
 
+// The Object class is the root of the class hierarchy
+
+// The Exceptions hierarchy:
+// Throwable is the root class of the exceptions hierarchy
+// Throwable has 2 subclasses: Error and Exception
+
+// Error is used to indicate serious problems that a reasonable application should not try to catch
+
+// Exception is used to indicate conditions that a reasonable application might want to catch
+// Exception has 2 subclasses: RuntimeException and IOException
+
 // we can throw an exception manually
 // we use exceptions to handle errors in our code
 
