@@ -1,23 +1,20 @@
 package exceptions;
 
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
 public class ExceptionsDemo
 {
-	public static void show()
+	public static void show() throws IOException
 	{
 		final Account account = new Account();
 		try
 		{
-			account.deposit(-1);
+			account.deposit(1001);
 		}
 		catch(IOException e)
 		{
-			throw new RuntimeException(e);
+			System.out.println("Logging");
+			throw e;
 		}
 	}
 }
