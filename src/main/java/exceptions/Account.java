@@ -19,12 +19,19 @@ public class Account
 			throw new IOException("value cannot be greater than 1000");
 	}
 
-	public void withdraw(float value) throws InsufficientFundsException
+	public void withdraw(float value) throws AccountExceptions
 	{
 		// Unchecked exceptions do not need to be handled or declared
 		if(value >= balance)
-			// it does not make sense to wrap the exception in try-catch because it can be wrapped
-			// in a try-catch block in the main method or other methods that call this method
-			throw new InsufficientFundsException();
+		{
+
+			//			InsufficientFundsException fundsException   = new InsufficientFundsException();
+			//			AccountExceptions          accountException = new AccountExceptions();
+			// Init cause is used because the exception is wrapped in another exception
+			//			accountException.initCause(fundsException);
+			//			throw accountException;
+
+			throw new AccountExceptions(new InsufficientFundsException());
+		}
 	}
 }

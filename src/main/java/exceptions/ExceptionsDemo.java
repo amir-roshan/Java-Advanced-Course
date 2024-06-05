@@ -12,9 +12,10 @@ public class ExceptionsDemo
 			account.deposit(1000);
 			account.withdraw(1000);
 		}
-		catch(InsufficientFundsException e)
+		catch(AccountExceptions e)
 		{
-			throw new RuntimeException(e);
+			var cause = e.getCause();
+			System.out.println(cause.getMessage());
 		}
 		catch(IOException e)
 		{
