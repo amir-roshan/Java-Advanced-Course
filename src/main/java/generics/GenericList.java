@@ -1,7 +1,5 @@
 package generics;
 
-// T stands for type it is used in generics
-// E stands for element it is used in collections
 public class GenericList<T>
 {
 	private T[] items = (T[]) new Object[10];
