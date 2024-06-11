@@ -11,6 +11,12 @@ public class User implements Comparable<User>
 	}
 
 	@Override
+	public String toString()
+	{
+		return "User{" + "points=" + points + '}';
+	}
+
+	@Override
 	public int compareTo(final User other)
 	{
 
