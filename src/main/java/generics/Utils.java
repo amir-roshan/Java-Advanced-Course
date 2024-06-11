@@ -37,4 +37,14 @@ public class Utils
 		}
 	}
 
+	// The ? mark is a wildcard character which means any type that extends User
+	// instead of extending User we can use super User, super User means any type that is a parent of User
+	// We can not store the value in a variable of type user because we don't know the type of the object when
+	// we use the super keyword
+	public static void print(GenericList<? extends User> users)
+	{
+		User user = users.get(0);
+		System.out.println(users.getCount());
+	}
+
 }

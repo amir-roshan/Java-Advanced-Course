@@ -22,5 +22,17 @@ public class Main
 		Utils.print(user1);
 		System.out.println("-----------------");
 		Utils.print(users);
+
+		// OR
+		System.out.println("-----------------");
+
+		var instructors = new GenericList<Instructor>();
+		var usersList   = new GenericList<User>();
+
+		instructors.add(new Instructor(10));
+		usersList.add(new User(20));
+
+		Utils.print(instructors);
+		Utils.print(usersList);
 	}
 }

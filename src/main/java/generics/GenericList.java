@@ -21,4 +21,9 @@ public class GenericList<T>
 		if(index < 0 || index >= count)
 			throw new IllegalArgumentException("Invalid index");
 	}
+
+	public int getCount()
+	{
+		return count;
+	}
 }
