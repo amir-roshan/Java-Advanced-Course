@@ -1,5 +1,7 @@
 package generics;
 
+import java.util.ArrayList;
+
 public class Utils
 {
 
@@ -20,6 +22,19 @@ public class Utils
 	public static <K, V> void print(K key, V value)
 	{
 		System.out.println("Key: " + key + ", Value: " + value);
+	}
+
+	public static void print(User user)
+	{
+		System.out.println(user);
+	}
+
+	public static void print(ArrayList<User> users)
+	{
+		for(User user : users)
+		{
+			System.out.println(user);
+		}
 	}
 
 }
