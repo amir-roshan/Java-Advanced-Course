@@ -16,4 +16,10 @@ public class Utils
 		return (first.compareTo(second) < 0) ? second : first;
 	}
 
+	// Generic method , K stands for Key, V stands for Value
+	public static <K, V> void print(K key, V value)
+	{
+		System.out.println("Key: " + key + ", Value: " + value);
+	}
+
 }
