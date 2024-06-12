@@ -1,6 +1,8 @@
 package generics;
 
-public class GenericList<T>
+import java.util.Iterator;
+
+public class GenericList<T> implements Iterable<T>
 {
 	private final T[] items = (T[]) new Object[10];
 	private       int count;
@@ -25,5 +27,11 @@ public class GenericList<T>
 	public int getCount()
 	{
 		return count;
+	}
+
+	@Override
+	public Iterator<T> iterator()
+	{
+		return null;
 	}
 }
